@@ -39,42 +39,60 @@
     <li>El primer jugador en llevar todas sus fichas a la meta gana.</li>
   </ul>
 
-  
-  <h2>Tablero de juego</h2>
-  <table>
+  <style>
+    table {
+        border-collapse: collapse;
+        border: 2px solid black;
+        margin: 20px auto;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+    .combinada {
+        background-color: #90EE90;
+    }
+    .vacio {
+        background-color: #FFF;
+    }
+</style>
+</head>
+<body>
+<h2>Funcionamiento del Parchís</h2>
+
+<table>
     <thead>
-      <tr>
-        <th colspan="2">Casilla</th>
-        <th colspan="2">Descripción</th>
-        <th>Color</th>
-      </tr>
+        <tr>
+            <th colspan="2">Casilla</th>
+            <th>Descripción</th>
+        </tr>
     </thead>
     <tbody>
-      <tr>
-        <td colspan="2" rowspan="2">Casilla de salida</td>
-        <td colspan="2">Desde aquí empiezan las fichas de cada jugador.</td>
-        <td rowspan="4">Blanco</td>
-      </tr>
-      <tr>
-        <td colspan="2">Cada jugador tiene 4 fichas en esta casilla al inicio del juego.</td>
-      </tr>
-      <tr>
-        <td colspan="2" rowspan="2">Casilla segura</td>
-        <td colspan="2">Una ficha que llegue a esta casilla no puede ser comida por otras fichas.</td>
-      </tr>
-      <tr>
-        <td colspan="2">Solo se puede llegar a esta casilla si se tira un 5 o un 6.</td>
-      </tr>
-      <tr>
-        <td colspan="2" rowspan="2">Casilla normal</td>
-        <td colspan="2">Se puede entrar y salir de esta casilla sin problemas.</td>
-        <td rowspan="6">Negro</td>
-      </tr>
-      <tr>
-        <td colspan="2">Si una ficha se queda en esta casilla, no puede ser comida por otras fichas.</td>
-      </tr>
-      <tr>
-        <td colspan="2" rowspan="2">C
+        <tr>
+            <td class="vacio" rowspan="3">Inicio</td>
+            <td class="combinada" rowspan="3">1-4 jugadores</td>
+            <td>Los jugadores deben mover sus fichas desde aquí al recorrido principal.</td>
+        </tr>
+        <tr><td class="vacio"></td><td>Movimiento inicial de 5 o 6 es necesario para salir.</td></tr>
+        <tr><td class="vacio"></td><td>Las fichas no pueden ser capturadas en esta área.</td></tr>
+        <tr>
+            <td class="combinada">Recorrido</td>
+            <td class="vacio" rowspan="4">Casillas normales</td>
+            <td>Los jugadores avanzan sus fichas por el recorrido según el número de dados lanzados.</td>
+        </tr>
+        <tr><td class="vacio"></td><td>Las fichas pueden ser capturadas por otras fichas en esta área.</td></tr>
+        <tr><td class="vacio"></td><td>Los jugadores deben mover todas sus fichas alrededor del tablero hasta llegar a la meta.</td></tr>
+        <tr><td class="vacio"></td><td>El orden de movimiento es en sentido horario.</td></tr>
+        <tr>
+            <td class="vacio" colspan="2">Casa</td>
+            <td>Las fichas capturadas se envían aquí y deben ser movidas fuera con un 5 o 6.</td>
+        </tr>
+        <tr>
+            <td class="vacio" colspan="2">Meta</td>
+            <td>Las fichas deben ser movidas aquí para completar el juego.</td>
+        </tr>
+    </tbody>
+</table>
 
   
   <h2>Captura de piezas</h2>
