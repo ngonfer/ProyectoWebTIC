@@ -41,31 +41,40 @@
 
   
   <h2>Tablero de juego</h2>
-  <table border="1">
-    <tr>
-      <th>Fila</th>
-      <th>Columna</th>
-      <th>Pieza</th>
-    </tr>
-    <tr>
-      <td rowspan="2">1</td>
-      <td>1</td>
-      <td>Pieza blanca</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Pieza blanca</td>
-    </tr>
-    <tr>
-      <td rowspan="2">2</td>
-      <td>1</td>
-      <td>Pieza negra</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Pieza negra</td>
-    </tr>
-  </table>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Casilla</th>
+        <th colspan="2">Descripción</th>
+        <th>Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2" rowspan="2">Casilla de salida</td>
+        <td colspan="2">Desde aquí empiezan las fichas de cada jugador.</td>
+        <td rowspan="4">Blanco</td>
+      </tr>
+      <tr>
+        <td colspan="2">Cada jugador tiene 4 fichas en esta casilla al inicio del juego.</td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2">Casilla segura</td>
+        <td colspan="2">Una ficha que llegue a esta casilla no puede ser comida por otras fichas.</td>
+      </tr>
+      <tr>
+        <td colspan="2">Solo se puede llegar a esta casilla si se tira un 5 o un 6.</td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2">Casilla normal</td>
+        <td colspan="2">Se puede entrar y salir de esta casilla sin problemas.</td>
+        <td rowspan="6">Negro</td>
+      </tr>
+      <tr>
+        <td colspan="2">Si una ficha se queda en esta casilla, no puede ser comida por otras fichas.</td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2">C
 
   
   <h2>Captura de piezas</h2>
